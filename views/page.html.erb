@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>kidecrypt</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Atma:700|Baloo+Thambi|Bungee+Shade|Covered+By+Your+Grace|Gloria+Hallelujah|Rock+Salt|Shadows+Into+Light" rel="stylesheet">
+    <style>
+      body {
+      <% if body_message.length % 8 == 0 %>
+      font-family: 'Atma', cursive;
+      <% elsif body_message.length % 8 == 1 %>
+      font-family: 'Baloo Thambi', cursive;
+      <% elsif body_message.length % 8 == 2 %>
+      font-family: 'Bungee Shade', cursive;
+      <% elsif body_message.length % 8 == 3 %>
+      font-family: 'Shadows Into Light', cursive;
+      <% elsif body_message.length % 8 == 4 %>
+      font-family: 'Architects Daughter', cursive;
+      <% elsif body_message.length % 8 == 5 %>
+      font-family: 'Gloria Hallelujah', cursive;
+      <% elsif body_message.length % 8 == 6 %>
+      font-family: 'Rock Salt', cursive;
+      <% elsif body_message.length % 8 == 7 %>
+      font-family: 'Covered By Your Grace', cursive;
+      <% end %>
+      font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <%= body_message %>
+  </body>
+</html>
