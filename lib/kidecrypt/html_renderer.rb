@@ -11,8 +11,14 @@ module Kidecrypt
       puts result
     end
 
-    def self.template_contents
-      File.read(File.join(File.dirname(__FILE__), '..', '..', 'views', 'page.html.erb'))
+    def output_with_key msg, key
+      template = self.class.template_contents 'page-with-key'
+      result = ERB.new(template).result(binding)
+      puts result
+    end
+
+    def self.template_contents name='page'
+      File.read(File.join(File.dirname(__FILE__), '..', '..', 'views', "#{name}.html.erb"))
     end
   end
 end

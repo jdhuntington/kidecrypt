@@ -12,6 +12,10 @@ module Kidecrypt
       Shift1.new(msg).render(renderer)
     end
 
+    def frequency(msg)
+      Frequency.new(msg).render(renderer)
+    end
+
     def renderer
       HtmlRenderer.new
     end
