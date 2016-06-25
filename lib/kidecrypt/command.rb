@@ -16,6 +16,10 @@ module Kidecrypt
       Frequency.new(msg).render(renderer)
     end
 
+    def number_replacement(msg)
+      NumberReplacement.new(msg).render(renderer)
+    end
+
     def renderer
       HtmlRenderer.new
     end
